@@ -1,18 +1,17 @@
 <tr>
   <td>
-  TINY IMAGE
+   <%= image_tag item.product.image.tiny %>
   </td>
   <td>
-  NAME
+  <%= item.product.name %>
   </td>
   <td>
-    <%= humanized_money_with_symbol 50 %>
+  <%= humanized_money_with_symbol item.item_price_cents / 100 %>
   </td>
   <td>
-    
-    <%= quantity %>
+  <%= item.quantity  %>
   </td>
-  <td>
-    <%= 5 %>
+<td>
+    <%= humanized_money_with_symbol item.total_price_cents / 100  %>
   </td>
 </tr>
